@@ -1,16 +1,19 @@
 package states;
 
 import flixel.FlxState;
+import sprites.*;
 
 class PlayState extends FlxState
 {
+	public var station:Celestial;
+
 	override public function create()
 	{
 		super.create();
 
-		var text = new flixel.text.FlxText(0, 0, 0, "Hello World", 64);
-		text.screenCenter();
-		add(text);
+		station = new Celestial(0, 0);
+		station.screenCenter();
+		add(station);
 	}
 
 	override public function update(elapsed:Float)
