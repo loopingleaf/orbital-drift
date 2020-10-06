@@ -1,10 +1,7 @@
 package states;
 
 import events.*;
-import flixel.FlxG;
 import flixel.FlxState;
-import flixel.system.scaleModes.PixelPerfectScaleMode;
-import haxe.Log;
 import sprites.*;
 
 class PlayState extends FlxState
@@ -15,11 +12,9 @@ class PlayState extends FlxState
 	override public function create()
 	{
 		super.create();
-		FlxG.scaleMode = new PixelPerfectScaleMode();
-		// FlxG.resizeGame(Math.floor(FlxG.width * 2), Math.floor(FlxG.height * 2));
 		station = new Celestial(0, 0);
 		station.screenCenter();
-		eventTest = new OxygenDamage(0, 0);
+		eventTest = new OxygenDamage(25, 25);
 		add(eventTest);
 		add(station);
 	}
