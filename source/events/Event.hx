@@ -10,6 +10,8 @@ class Event extends FlxGroup
 {
 	private static inline final CHOICE_SPACE:Float = 2;
 
+	private static var all:Array<Event> = [];
+
 	public var description:String;
 	public var state:FlxGroup;
 	public var x:Float;
@@ -25,6 +27,7 @@ class Event extends FlxGroup
 	public function new(X:Float, Y:Float, Description:String = "", Width:Int = 300, Height:Int = 160)
 	{
 		super();
+		all.push(this);
 		x = X;
 		y = Y;
 		width = Width;
@@ -42,7 +45,7 @@ class Event extends FlxGroup
 		choiceFuns.push(onClick);
 	}
 
-	public function createMembers()
+	private function createMembers()
 	{
 		var text = new FlxText(x + windowOffset, y + windowOffset, width, description);
 		var marginX:Float = x + windowOffset;
@@ -66,8 +69,9 @@ class Event extends FlxGroup
 			add(b);
 	}
 
-	public function close()
+	override function destroy()
 	{
-		kill();
+		all.remove(this);
+		super.destroy();
 	}
 }

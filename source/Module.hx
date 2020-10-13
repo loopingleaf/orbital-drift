@@ -1,3 +1,6 @@
 package;
 
-class Module {}
+class Module
+{
+	public var active:Bool;
+}

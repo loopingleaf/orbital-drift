@@ -11,5 +11,6 @@ class Celestial extends FlxSprite
 	{
 		super(x, y);
 		makeGraphic(16, 16, FlxColor.BLUE);
+		trajectory = new Trajectory(this);
 	}
 }

@@ -1,8 +1,12 @@
 package;
 
 import flixel.util.FlxColor;
+import sprites.Player;
 
-class Glob {}
+class Glob
+{
+	public static var player:Player;
+}
 
 class Color
 {

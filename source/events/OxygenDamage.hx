@@ -10,12 +10,10 @@ class OxygenDamage extends Event
 		addChoice("Send a tech", sendATech);
 		addChoice("Send a tech 2", sendATech);
 		createMembers();
-		/*var button = new FlxButton(x + 10, y + 20, "Send a tech", sendATech);
-			add(button); */
 	}
 
 	public function sendATech()
 	{
-		close();
+		destroy();
 	}
 }

@@ -1,25 +1,26 @@
 package states;
 
 import events.*;
+import flixel.FlxG;
 import flixel.FlxState;
 import sprites.*;
 
 class PlayState extends FlxState
 {
-	public var station:Celestial;
 	public var eventTest:Event;
+	public var hud:HUD;
 
 	override public function create()
 	{
 		super.create();
-		station = new Celestial(0, 0);
-		station.screenCenter();
+		Glob.player = new Player();
+		hud = new HUD();
+		Glob.player.screenCenter();
 		eventTest = new OxygenDamage(25, 25);
+		add(hud);
 		add(eventTest);
-		add(station);
+		add(Glob.player);
 	}
-
-	public function testBtn() {}
 
 	override public function update(elapsed:Float)
 	{
