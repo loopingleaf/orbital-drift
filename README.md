@@ -2,7 +2,7 @@
 
 The game prototype I hope to begin during Devtober 2020 and to finish later on.
 
-It tends to be a Paper Please like in which you play as the admin operator of a space station. You have to take care of
+It tends to be a _Papers, Please_ like in which you play as the admin operator of a space station. You have to take care of
 the supplies, the oxygen levels, the systems, the passengers, the docks, the communications and so on, on your 
 dashboard. To make the station prosper and survive, you'll have to face difficult choices.
 
@@ -12,7 +12,9 @@ It's a management-strategy game.
 
 ### Character
 
-The player sees the "administration table" of the station
+The player sees the "administration table" of the station. They can move devices like a radio, a clipboard and interact
+with them (press buttons, turn pages, move sliders...). They can interact with the screens on the dashboard (press
+buttons, move sliders...).
 
 ### Control
 
