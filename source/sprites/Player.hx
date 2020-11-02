@@ -3,7 +3,8 @@ package sprites;
 // Actually the player's station.
 class Player extends Celestial
 {
-	public var oxygenLevel:Int;
+	public var oxygenLevel:Float;
+	public var oxygenVentilation:Float;
 	public var foodLevel:Int;
 	public var iridiumLevel:Int;
 	public var maxCargo:Int;
@@ -20,6 +21,7 @@ class Player extends Celestial
 	{
 		super(X, Y);
 		oxygenLevel = 100;
+		oxygenVentilation = 1;
 		foodLevel = 100;
 		iridiumLevel = 12;
 		maxCargo = 200;

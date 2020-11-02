@@ -5,6 +5,7 @@ import sprites.Player;
 
 class Glob
 {
+	public static inline final TICK:Float = 2;
 	public static var player:Player;
 }
 
